@@ -4,9 +4,9 @@ from search import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from animal import Animals
 
-class searchWindow (QtWidgets.QMainWindow):
+class searchWindow(QMainWindow):
     def __init__(self):
-        super(searchWindow, self).__init__()
+        super().__init__()
         self.ui =Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.btn_ara.clicked.connect(self.search)
@@ -23,9 +23,3 @@ class searchWindow (QtWidgets.QMainWindow):
     
         self.ui.lbl_goster.setText(x)
                        
-def app():
-    app=QApplication(sys.argv)
-    win = searchWindow()
-    win.show()
-    sys.exit(app.exec_())
-app()

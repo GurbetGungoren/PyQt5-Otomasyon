@@ -3,9 +3,9 @@ from PyQt5 import QtWidgets
 from update import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from animal import Animals
-class updt (QtWidgets.QMainWindow):
+class updt(QMainWindow):
     def __init__(self):
-        super(updt, self).__init__()
+        super().__init__()
 
         self.ui =Ui_MainWindow()
         self.ui.setupUi(self)
@@ -36,11 +36,3 @@ class updt (QtWidgets.QMainWindow):
         newAnimals=Animals(n,y,c,p)  
         newAnimals.addAnimals(newAnimals)
         
-        
-
-def app():
-    app=QApplication(sys.argv)
-    win = updt()
-    win.show()
-    sys.exit(app.exec_())
-app()   

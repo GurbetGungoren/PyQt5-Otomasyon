@@ -4,12 +4,13 @@ from entry1 import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from animal import Animals 
 
-class Window (QtWidgets.QMainWindow):
+class addWindow(QMainWindow):
     def __init__(self):
-        super(Window, self).__init__()
+        super().__init__()
     
         self.ui =Ui_MainWindow()
         self.ui.setupUi(self)
+
         self.ui.btnSave.clicked.connect(self.addAnimals)
 
         
@@ -22,14 +23,9 @@ class Window (QtWidgets.QMainWindow):
         
         newAnimal=Animals(name1,age1,gender1,problem1)
         newAnimal.addAnimals(newAnimal)
-
+       
   
-def app():
-    app=QApplication(sys.argv)
-    win = Window()
-    win.show()
-    sys.exit(app.exec_())
-app()
+
 # Uygulama =QApplication(sys.argv)
 # win = QMainWindow()
 # ui =Ui_MainWindow()

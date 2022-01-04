@@ -4,9 +4,9 @@ from delete import Ui_MainWindow
 from PyQt5.QtWidgets import *
 from animal import Animals 
 
-class Window (QtWidgets.QMainWindow):
+class  deleteWindow(QMainWindow):
     def __init__(self):
-        super(Window, self).__init__()
+        super().__init__()
         self.ui =Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.delete)
@@ -18,9 +18,3 @@ class Window (QtWidgets.QMainWindow):
         #index bul pop la sis popla 4 kere çalıştır
         #geri kalanları yazdır tekrardan
 
-def app():
-    app=QApplication(sys.argv)
-    win = Window()
-    win.show()
-    sys.exit(app.exec_())
-app()   
